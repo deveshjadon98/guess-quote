@@ -1,1 +1,1 @@
-export { SampleContainer } from "./SampleContainer";
+export { default as SampleContainer } from "./SampleContainer";

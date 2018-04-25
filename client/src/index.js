@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 
-import { App } from "./App";
-import { RouteManager } from "./RouteManager";
+import App from "./App";
+import RouteManager from "./RouteManager";
 import store from "./core/store";
 
 import "./index.css";

@@ -2,16 +2,34 @@ const mongoose = require("mongoose");
 
 // Question Schema
 const QuestionSchema = mongoose.Schema({
-  title: String,
+  title: {
+    type: String,
+    default: null
+  },
   options: [
     {
-      value: String,
-      isCorrect: Boolean
+      value: {
+        type: String,
+        default: null
+      },
+      is_correct: {
+        type: Boolean,
+        default: false
+      }
     }
   ],
-  created_at: Date,
-  updated_at: Date,
-  is_deleted: Boolean
+  is_deleted: {
+    type: Boolean,
+    default: false
+  },
+  created_at: {
+    type: Date,
+    default: Date.now
+  },
+  updated_at: {
+    type: Date,
+    default: Date.now
+  }
 });
 
 // Question Model

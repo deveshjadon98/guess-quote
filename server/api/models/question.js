@@ -2,9 +2,16 @@ const mongoose = require("mongoose");
 
 // Question Schema
 const QuestionSchema = mongoose.Schema({
-  question: { type: String },
-  answer: { type: String },
-  options: [{ type: String }]
+  title: String,
+  options: [
+    {
+      value: String,
+      isCorrect: Boolean
+    }
+  ],
+  created_at: Date,
+  updated_at: Date,
+  is_deleted: Boolean
 });
 
 // Question Model
